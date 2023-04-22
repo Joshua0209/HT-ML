@@ -24,31 +24,33 @@ def error(w, X, y, type):
 
 def grad(w, X, y, type):
     if type == "sqr":
-        return 2/len(X)*(np.outer(X, X)@w - (X.T)*y)
+        return 2*(np.outer(X, X)@w - (X.T)*y)
     elif type == "ce":
-        return 1/len(X)*theta(-y*(w*X))*(-y*X)
+        return theta(-y*(X@w))*(-y*X)
 
 
 def SGD(type, w0):
     toterr = 0.
-    w = w0
     for i in range(N):
+        w = w0.copy()
         for t in range(T):
             idx = np.random.randint(0, len(x_train))
             w += -ETA*grad(w, x_train[idx], y_train[idx], type)
         toterr += error(w, x_train, y_train, type)
+        del w
     return toterr/N
 
 
 def Eout_estimate(type, w0):
     output = 0.
-    w = w0
     for i in range(N):
+        w = w0.copy()
         for t in range(T):
             idx = np.random.randint(0, len(x_train))
             w += -ETA*grad(w, x_train[idx], y_train[idx], type)
         output += abs(error(w, x_train, y_train, "0/1") -
                       error(w, x_test, y_test, "0/1"))
+        del w
     return output/N
 
 
@@ -60,7 +62,7 @@ if __name__ == "__main__":
     print(error(w13, x_train, y_train, "sqr"))
 
     # Q14: SGD linear regression
-    ETA, T, N = 0.001, 800, 10
+    ETA, T, N = 0.001, 800, 1000
     print(SGD("sqr", np.zeros(len(x_train[0]))))
 
     # Q15: SGD logistic regression
@@ -77,8 +79,8 @@ if __name__ == "__main__":
               error(w13, x_test, y_test, "0/1")))
 
 # 0.7922347761105571
-# 0.8539115134715469
-# 0.6733944141669019
-# 0.6129994839182982
-# 0.04049999999999999
-# 0.02999999999999997
+# 0.8234241910443619
+# 0.6573118958314371
+# 0.6052453923482037
+# 0.030770000000000016
+# 0.040000000000000036
