@@ -5,12 +5,12 @@ More information can be found at [here](https://www.csie.ntu.edu.tw/~htlin/mooc/
 Besides, I would like to recommend [notes](https://hackmd.io/@johnnyasd12/BJ9bqqevD/https%3A%2F%2Fhackmd.io%2Fc%2FBJ9bqqevD%2Fedit%3Fedit) shared by @yenho.
 They helped me a lot while studying the course.
 
-## Contents
+## Contents of MOOC
 ### Foundations
 - HW1: PLA/ Pocket
-- HW2: Decision Stump
-- HW3: LinearRegression, Logistic Regression, Gradient Descent
-- HW4: Ridge Regression, V-fold Cross Validation
+- HW2: Decision Stumps
+- HW3: Linear Regression, Logistic Regression, Gradient Descent
+- HW4: Ridge Regression, V-Fold Cross Validation
 
 ### Techniques
 - HW1: Polynomial Kernel, SVM
@@ -18,7 +18,16 @@ They helped me a lot while studying the course.
 - HW3: Decision Tree CART, Random Forest
 - HW4: Neural Network, Kmeans, KNN
 
-## Roadmap for the Course
+## Contents of 2023 Spring
+- HW1: PLA
+- HW2: Decision Stumps
+- HW3: Linear Regression, Logistic Regression, Non-Linear Transform, SGD, 
+- HW4: L2/L1-Regularized Logistic Regression, Polynomial Kernel, V-Fold Cross Validation
+- HW5: Soft-Margin SVM and AdaBoost
+
+
+## Roadmap for the MOOC
+$^\ast$ The course in 2023 spring is a condense version of MOOC. More information can be found at [here](https://www.csie.ntu.edu.tw/~htlin/course/ml23spring/).
 <html>
 <table border="1" cellpadding="1" cellspacing="1" style="width:500px">
 	<tbody>
